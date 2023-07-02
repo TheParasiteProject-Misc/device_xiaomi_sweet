@@ -63,9 +63,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_FBE_METADATA_MOUNT_IGNORE=1
         export OF_ENABLE_FS_COMPRESSION=1
 
-	# Use Magisk v26.1 for the magisk addon
-	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v26.1.zip
-
         # OTA
         export OF_KEEP_DM_VERITY=1
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
@@ -79,10 +76,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_RIGHT=48
         export OF_HIDE_NOTCH=1
 	export OF_CLOCK_POS=1
-
-	# R11.1 Settings
-	export FOX_VERSION="R11.1_4"
-	export OF_MAINTAINER="Aryan"
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
